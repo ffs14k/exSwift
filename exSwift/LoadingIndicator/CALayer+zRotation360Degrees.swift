@@ -32,7 +32,7 @@ extension CALayer {
         removeAnimation(forKey: zRotationKey)
     }
     
-    func isRotateAnimation360DegreesExsists() -> Bool {
+    var isRotateAnimation360DegreesExsists: Bool {
         
         guard animation(forKey: zRotationKey) != nil else { return false }
         return true

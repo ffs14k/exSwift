@@ -43,13 +43,13 @@ final class CometReplicationLoaderView: UIView, LoadingIndicator {
     
     private let endCoeffecientConstant: CGFloat = 0.7
     private let circleWidth: CGFloat
-    private var loaderViewStyle: ReplicationLoaderStyle
+    private var loaderViewStyle: FlatLoaderStyle
     private var rotateAnimation: CABasicAnimation?
     
     
     // MARK: - Init
     
-    init(style: ReplicationLoaderStyle = .regular) {
+    init(style: FlatLoaderStyle = .regular) {
         
         loaderViewStyle = style
         circleWidth = loaderViewStyle.circleWidth
@@ -189,28 +189,6 @@ final class CometReplicationLoaderView: UIView, LoadingIndicator {
     
     private var loaderCircleRadius: CGFloat {
         return (smallestEdge / 2 * radiusScale - radiusInset)
-    }
-    
-}
-
-
-enum ReplicationLoaderStyle {
-    
-    case small
-    case regular
-    
-    var size: CGSize {
-        switch self {
-        case .small:        return CGSize(width: 40, height: 40)
-        case .regular:      return CGSize(width: 80, height: 80)
-        }
-    }
-    
-    var circleWidth: CGFloat {
-        switch self {
-        case .small:        return 1
-        case .regular:      return 2
-        }
     }
     
 }

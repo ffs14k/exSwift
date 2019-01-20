@@ -12,11 +12,6 @@ final class LoadingIndicatorViewController: UIViewController {
     
     // MARK: - Properties
     
-    let loaders = LoadersDataProvider.getLoadersViewModel()
-    
-    
-    // MARK: - Subviews
-    
     lazy private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -59,15 +54,12 @@ extension LoadingIndicatorViewController: UITableViewDelegate {
 extension LoadingIndicatorViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let loader = loaders[safe: indexPath.row] else { return UITableViewCell () }
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "loadingCell", for: indexPath)
-        (cell as? Setupable)?.setup(with: loader)
         
         return cell
     }

@@ -12,16 +12,37 @@ final class LoadingCell: UITableViewCell {
     
     // MARK: - Properties
     
-    struct ViewModel: ViewModelProtocol {
-        let loadingIndicator: LoadingIndicator
-    }
     
-    private var loadingIndicator: LoadingIndicator = {
-        let loader = CometLoaderView(style: .regular)
-        return loader
+//        This two guys stops their animation when out of screen because rotate animation became nil
+//
+//        private lazy var loadingIndicator: LoadingIndicator = {
+//            let loadingIndicator = CometLoaderView(style: .regular)
+//            return loadingIndicator
+//        }()
+//    
+//        private lazy var loadingIndicator: LoadingIndicator = {
+//            let loadingIndicator = CometGradientLoaderView(style: .regular)
+//            return loadingIndicator
+//        }()
+//        --------------------------------------------------------------------
+    
+    
+//        This guy became a circle if an application enter background
+//    
+//        private lazy var loadingIndicator: LoadingIndicator = {
+//            let loadingIndicator = CometReplicationLoaderView(style: .regular)
+//            return loadingIndicator
+//        }()
+//       ----------------------------------------------------------------
+    
+    
+//    This guy, undoubtedly, is your bro!
+//
+    private lazy var loadingIndicator: LoadingIndicator = {
+        let loadingIndicator = CometGrapeLoaderView(style: .regular)
+        return loadingIndicator
     }()
     
-    // MARK: - Subviews
     
     private var container: UIView = {
         let view = UIView()
@@ -40,45 +61,34 @@ final class LoadingCell: UITableViewCell {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        drawSelf()
+        fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    // MARK: - Private methods
     
     private func drawSelf() {
         
         selectionStyle = .none
         
         addSubview(container)
-        container.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
         container.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         container.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         container.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
         container.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
-        
-    }
-    
-    func toggleLoadingIndicator() {
-        loadingIndicator.isAnimating ? loadingIndicator.stop() : loadingIndicator.start()
-    }
-    
-}
-
-extension LoadingCell: Setupable {
-    
-    func setup(with model: ViewModelProtocol) {
-        
-        guard let model = model as? ViewModel else {
-            fatalError("Incorrect model passed")
-        }
-        
-        loadingIndicator = model.loadingIndicator
         
         container.addSubview(loadingIndicator.view)
         loadingIndicator.view.centerXAnchor.constraint(equalTo: container.centerXAnchor).isActive = true
         loadingIndicator.view.centerYAnchor.constraint(equalTo: container.centerYAnchor).isActive = true
         
         loadingIndicator.start()
+    }
+    
+    
+    // MARK: - Public methods
+    
+    func toggleLoadingIndicator() {
+        loadingIndicator.isAnimating ? loadingIndicator.stop() : loadingIndicator.start()
     }
     
 }

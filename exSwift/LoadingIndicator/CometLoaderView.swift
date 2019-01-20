@@ -23,7 +23,7 @@ final class CometLoaderView: UIView, LoadingIndicator {
     // MARK: - Public properties
     
     var isAnimating: Bool {
-        return viewForProgressLayer.layer.isRotateAnimation360DegreesExsists()
+        return viewForProgressLayer.layer.isRotateAnimation360DegreesExsists
     }
     
     var loaderColor: UIColor = defaultСolor {
