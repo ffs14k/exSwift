@@ -10,55 +10,113 @@ import QuartzCore
 
 extension CALayer {
     
-    // Info at the and of file!
+    /**
+     
+     - references:
+     
+     [Apple. Key-Value Coding Extensions](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW2)
+     
+     [Apple. Animatable Properties.](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/AnimatableProperties/AnimatableProperties.html)
+     
+     [Stack overflow 1](https://stackoverflow.com/questions/44230796/what-is-the-full-keypath-list-for-cabasicanimation)
+     
+     [Stack overflow 2](https://stackoverflow.com/questions/13913101/cabasicanimation-keys)
+     
+    */
     
     enum CALayerAnimatableProperty {
         
+        /// CGPoint
         case anchorPoint
-        case backgroundFilters
+        /// CGColor?
         case backgroundColor
+        /// [CIFilter]? (uses default CATransition, sub-properties of filters are animated using default CABasicAnimation)
+        case backgroundFilters
+        /// CGColor?
         case borderColor
+        /// CGFloat
         case borderWidth
+        /// CGRect
         case bounds
+        /// CGpoint
         case boundsOrigin
+        /// CGFloat
         case boundsOriginX
+        /// CGFloat
         case boundsOriginY
+        /// CGSize
         case boundsSize
+        /// CGFloat
         case boundsWidth
+        /// CGFloat
         case boundsHeight
+        /// CIFilter? (uses default CATransition, sub-properties of filters are animated using default CABasicAnimation)
         case compositingFilter
+        /// CGImage?
         case contents
+        /// CGRect
         case contentsRect
+        /// CGFloat
         case cornerRadius
-        case filters
+        /// Bool (no default animation)
         case doubleSided
+        /// [CIFilter]? (uses default CATransition, sub-properties of filters are animated using default CABasicAnimation)
+        case filters
+        /// CGRect (!!not animatable!! use bounds and position)
         case frame
+        /// Bool
         case hidden
+        /// CALayer?
         case mask
+        /// Bool
         case masksToBounds
+        /// Float (0 <= opacity <= 1)
         case opacity
+        /// CGPoint
         case position
+        /// CGFloat
         case positionX
+        /// CGFloat
         case positionY
+        /// CGFloat
         case rotationX
+        /// CGFloat
         case rotationY
+        /// CGFloat
         case rotationZ
+        /// CGFloat
         case scale
+        /// CGFloat
         case scaleX
+        /// CGFloat
         case scaleY
+        /// CGFloat
         case scaleZ
+        /// CGColor?
         case shadowColor
+        /// CGSize (default is (0,-3))
         case shadowOffset
+        /// Float (0 <= shadowOpacity <= 1)
         case shadowOpacity
+        /// CGpath?
         case shadowPath
+        /// CGFloat (default is 3)
         case shadowRadius
+        /// [CALayer]?
         case sublayers
+        /// CATransform3D
         case sublayerTransform
+        /// CGSize
         case translation
+        /// CGFloat
         case translationX
+        /// CGFloat
         case translationY
+        /// CGFloat
         case translationZ
+        /// CATransform3D
         case transform
+        /// CGFloat
         case zPosition
         
         var key: String {
@@ -115,62 +173,6 @@ extension CALayer {
     }
     
 }
-
-
-//    Links
-//
-//    https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW2
-//
-//    https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/AnimatableProperties/AnimatableProperties.html
-//
-//    https://stackoverflow.com/questions/44230796/what-is-the-full-keypath-list-for-cabasicanimation
-//
-//    https://stackoverflow.com/questions/13913101/cabasicanimation-keys
-//
-//
-//    Types:
-//
-//    anchorPoint: CGPoint
-//    backgroundColor: CGColor?
-//    backgroundFilters: [CIFilter]? (uses default CATransition, sub-properties of filters are animated using default CABasicAnimation)
-//    borderColor: CGColor?
-//    borderWidth: CGFloat
-//    bounds: CGRect
-//    compositingFilter: CIFilter? (uses default CATransition, sub-properties of filters are animated using default CABasicAnimation)
-//    contents: CGImage?
-//    contentsRect: CGRect
-//    cornerRadius: CGFloat
-//    doubleSided: Bool (no default animation)
-//    filters: __[CIFilter]? (uses default CATransition, sub-properties of filters are animated using default CABasicAnimation)
-//    frame: CGRect (!!not animatable!! use bounds and position)
-//    hidden: Bool
-//    mask: CALayer?
-//    masksToBounds: Bool
-//    opacity: Float (0 <= opacity <= 1)
-//    shadowColor: CGColor?
-//    shadowOffset: CGSize (default is (0,-3))
-//    shadowOpacity: Float (0 <= shadowOpacity <= 1)
-//    shadowPath: CGPath?
-//    shadowRadius: CGFloat (default is 3)
-//    sublayers: [CALayer]?
-//    sublayerTransform: CATransform3D
-//    transform: CATransform3D
-//    zPosition: CGFloat
-//
-//    position - CGPoint
-//    positionX; positionY - NSnumber, I suppose
-
-//    rotation; rotation.x; rotation.y; rotation.z;
-//    scale; scale.x; scale.y; scale.z
-//    translation.x; translation.y - NSNumber
-//
-//    bounds - CGRect
-//    boundsOrigin - CGpoint
-//    boundsSize - CGSize
-//    x, y, width, height  - NSNumber, I suppose
-//
-//    CALayer default implied CABasicAnimation**: duration = 0.25s or duration of current transaction.
-//    CALayer default implied CATransition**: duration = 0.25s or duration of current transaction, type = kCATransitionFade, start progress = 0, end progress = 1
 
 
 

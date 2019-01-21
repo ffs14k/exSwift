@@ -22,4 +22,22 @@ public extension Collection {
         return self[startIndex...endIndex]
     }
     
+    subscript(safe range: ClosedRange<Index>) -> SubSequence? {
+        
+        guard indices.contains(range.lowerBound), indices.contains(range.upperBound) else {
+            return nil
+        }
+        
+        return self[range]
+    }
+    
+    subscript(safe range: Range<Index>) -> SubSequence? {
+        
+        guard indices.contains(range.lowerBound), indices.contains(range.upperBound) else {
+            return nil
+        }
+        
+        return self[range]
+    }
+    
 }
