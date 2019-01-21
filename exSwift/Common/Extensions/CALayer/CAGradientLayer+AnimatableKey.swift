@@ -13,9 +13,13 @@ extension CAGradientLayer {
     enum AnimatableProperty {
         
         case inherited(_ property: CALayer.CALayerAnimatableProperty)
+        /// [CGColor]? ([Any]? by Apple docs, but CGColor works as well)
         case colors
+        /// [NSNuber]?
         case locations
+        /// CGPoint
         case endPoint
+        /// CGPoint
         case startPoint
         
         var key: String {

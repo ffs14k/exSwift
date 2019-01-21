@@ -13,11 +13,17 @@ extension CAReplicatorLayer {
     enum AnimatableProperty {
         
         case inherited(_ property: CALayer.CALayerAnimatableProperty)
+        /// CFTimeInterval (Double)
         case instanceDelay
+        /// CATransform3D
         case instanceTransform
+        /// Float
         case instanceRedOffset
+        /// Float
         case instanceGreenOffset
+        /// Float
         case instanceBlueOffset
+        /// Float
         case instanceAlphaOffset
         
         var key: String {

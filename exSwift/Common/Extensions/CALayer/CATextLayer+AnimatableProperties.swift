@@ -13,7 +13,9 @@ extension CATextLayer {
     enum AnimatableProperty {
         
         case inherited(_ property: CALayer.CALayerAnimatableProperty)
+        /// CGSize
         case fontSize
+        /// CGColor?
         case foregroundColor
 
         

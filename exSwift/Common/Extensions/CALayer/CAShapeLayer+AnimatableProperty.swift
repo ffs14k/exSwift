@@ -13,12 +13,19 @@ extension CAShapeLayer {
     enum AnimatableProperty {
         
         case inherited(_ property: CALayer.CALayerAnimatableProperty)
+        /// CGColor?
         case fillColor
+        /// [NSNumber]?
         case lineDashPhase
+        /// CGFloat
         case lineWidth
+        /// CGFloat
         case miterLimit
+        /// CGColor?
         case strokeColor
+        /// CGFloat
         case strokeStart
+        /// CGFloat
         case strokeEnd
         
         var key: String {

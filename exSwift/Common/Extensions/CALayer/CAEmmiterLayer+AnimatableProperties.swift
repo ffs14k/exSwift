@@ -13,8 +13,11 @@ extension CAEmitterLayer {
     enum AnimatableProperty {
         
         case inherited(_ property: CALayer.CALayerAnimatableProperty)
+        /// CGPoint
         case emitterPosition
+        /// CGFloat
         case emitterZPosition
+        /// CGSize
         case emitterSize
         
         var key: String {
