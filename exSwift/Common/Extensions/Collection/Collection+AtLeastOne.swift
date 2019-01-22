@@ -9,6 +9,7 @@
 extension Collection {
     
     var hasAtLeastOneElement: Bool {
+        
         guard let _ = indices.first else { return false }
         return true
     }

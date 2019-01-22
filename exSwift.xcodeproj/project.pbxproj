@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		443F2C7921C837C200CDE0A3 /* CometGrapeLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C7821C837C200CDE0A3 /* CometGrapeLoaderView.swift */; };
+		443F2C7921C837C200CDE0A3 /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C7821C837C200CDE0A3 /* CircularLoaderView.swift */; };
 		443F2C7C21C90C2100CDE0A3 /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C7B21C90C2100CDE0A3 /* Setupable.swift */; };
 		443F2C8321C9142800CDE0A3 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C8221C9142800CDE0A3 /* Collection+Safe.swift */; };
-		4473A2FF21F5295500E8C0C5 /* ActivityIndicatorLayerCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A2FE21F5295500E8C0C5 /* ActivityIndicatorLayerCreator.swift */; };
-		4473A30121F529DA00E8C0C5 /* FlatCircularActivityIndicatorCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A30021F529DA00E8C0C5 /* FlatCircularActivityIndicatorCreator.swift */; };
+		4473A2FF21F5295500E8C0C5 /* LoadingIndicatorDrawerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A2FE21F5295500E8C0C5 /* LoadingIndicatorDrawerProtocol.swift */; };
+		4473A30321F7A8A400E8C0C5 /* CircularLoadingIndicatorDrawerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A30221F7A8A400E8C0C5 /* CircularLoadingIndicatorDrawerProtocol.swift */; };
+		4473A30521F7AB6B00E8C0C5 /* CircularLoadingIndicatorDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A30421F7AB6B00E8C0C5 /* CircularLoadingIndicatorDrawer.swift */; };
+		4473A30721F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A30621F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift */; };
 		449CF05B21F3DEB500C879D7 /* CABasicAnimation+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF05A21F3DEB500C879D7 /* CABasicAnimation+Animation.swift */; };
 		449CF05D21F3DFFE00C879D7 /* Collection+NotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF05C21F3DFFE00C879D7 /* Collection+NotEmpty.swift */; };
 		449CF06421F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF06321F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift */; };
@@ -26,21 +28,19 @@
 		44C4816C21C669D000F96EB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C4816B21C669D000F96EB8 /* AppDelegate.swift */; };
 		44C4817321C669D200F96EB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44C4817221C669D200F96EB8 /* Assets.xcassets */; };
 		44C4818221C66C6000F96EB8 /* LoaderViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C4817E21C66C6000F96EB8 /* LoaderViewStyle.swift */; };
-		44C4818321C66C6000F96EB8 /* CometGradientLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C4817F21C66C6000F96EB8 /* CometGradientLoaderView.swift */; };
-		44C4818421C66C6000F96EB8 /* CometLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C4818021C66C6000F96EB8 /* CometLoaderView.swift */; };
 		44C4818521C66C6000F96EB8 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C4818121C66C6000F96EB8 /* LoadingIndicator.swift */; };
-		44C4818721C66C7100F96EB8 /* CALayer+zRotation360Degrees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C4818621C66C7100F96EB8 /* CALayer+zRotation360Degrees.swift */; };
 		44C4818921C66CF100F96EB8 /* LoadingIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C4818821C66CF100F96EB8 /* LoadingIndicatorViewController.swift */; };
 		44C4818C21C66E2A00F96EB8 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C4818B21C66E2A00F96EB8 /* LoadingCell.swift */; };
-		44C6B7D021C680EE007C1330 /* CometReplicationLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C6B7CF21C680EE007C1330 /* CometReplicationLoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		443F2C7821C837C200CDE0A3 /* CometGrapeLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CometGrapeLoaderView.swift; sourceTree = "<group>"; };
+		443F2C7821C837C200CDE0A3 /* CircularLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLoaderView.swift; sourceTree = "<group>"; };
 		443F2C7B21C90C2100CDE0A3 /* Setupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
 		443F2C8221C9142800CDE0A3 /* Collection+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
-		4473A2FE21F5295500E8C0C5 /* ActivityIndicatorLayerCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorLayerCreator.swift; sourceTree = "<group>"; };
-		4473A30021F529DA00E8C0C5 /* FlatCircularActivityIndicatorCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatCircularActivityIndicatorCreator.swift; sourceTree = "<group>"; };
+		4473A2FE21F5295500E8C0C5 /* LoadingIndicatorDrawerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorDrawerProtocol.swift; sourceTree = "<group>"; };
+		4473A30221F7A8A400E8C0C5 /* CircularLoadingIndicatorDrawerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLoadingIndicatorDrawerProtocol.swift; sourceTree = "<group>"; };
+		4473A30421F7AB6B00E8C0C5 /* CircularLoadingIndicatorDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLoadingIndicatorDrawer.swift; sourceTree = "<group>"; };
+		4473A30621F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СircleActivityIndicatorType.swift"; sourceTree = "<group>"; };
 		449CF05A21F3DEB500C879D7 /* CABasicAnimation+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Animation.swift"; sourceTree = "<group>"; };
 		449CF05C21F3DFFE00C879D7 /* Collection+NotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+NotEmpty.swift"; sourceTree = "<group>"; };
 		449CF05E21F3E07900C879D7 /* Collection+AtLeastOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+AtLeastOne.swift"; sourceTree = "<group>"; };
@@ -57,13 +57,9 @@
 		44C4817221C669D200F96EB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44C4817721C669D200F96EB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44C4817E21C66C6000F96EB8 /* LoaderViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderViewStyle.swift; sourceTree = "<group>"; };
-		44C4817F21C66C6000F96EB8 /* CometGradientLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CometGradientLoaderView.swift; sourceTree = "<group>"; };
-		44C4818021C66C6000F96EB8 /* CometLoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CometLoaderView.swift; sourceTree = "<group>"; };
 		44C4818121C66C6000F96EB8 /* LoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
-		44C4818621C66C7100F96EB8 /* CALayer+zRotation360Degrees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+zRotation360Degrees.swift"; sourceTree = "<group>"; };
 		44C4818821C66CF100F96EB8 /* LoadingIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorViewController.swift; sourceTree = "<group>"; };
 		44C4818B21C66E2A00F96EB8 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
-		44C6B7CF21C680EE007C1330 /* CometReplicationLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CometReplicationLoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +82,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		4473A2FD21F5293200E8C0C5 /* LayerCreation */ = {
+		4473A2FD21F5293200E8C0C5 /* LoadingIndicatorDrawer */ = {
 			isa = PBXGroup;
 			children = (
-				4473A2FE21F5295500E8C0C5 /* ActivityIndicatorLayerCreator.swift */,
-				4473A30021F529DA00E8C0C5 /* FlatCircularActivityIndicatorCreator.swift */,
+				4473A2FE21F5295500E8C0C5 /* LoadingIndicatorDrawerProtocol.swift */,
+				4473A30221F7A8A400E8C0C5 /* CircularLoadingIndicatorDrawerProtocol.swift */,
+				4473A30421F7AB6B00E8C0C5 /* CircularLoadingIndicatorDrawer.swift */,
 			);
-			path = LayerCreation;
+			path = LoadingIndicatorDrawer;
 			sourceTree = "<group>";
 		};
 		449CF05221F3DC0E00C879D7 /* Extensions */ = {
@@ -177,14 +174,11 @@
 		44C4817D21C66C6000F96EB8 /* LoadingIndicator */ = {
 			isa = PBXGroup;
 			children = (
-				4473A2FD21F5293200E8C0C5 /* LayerCreation */,
+				4473A2FD21F5293200E8C0C5 /* LoadingIndicatorDrawer */,
 				44C4818A21C66CF400F96EB8 /* Usage */,
-				44C4818621C66C7100F96EB8 /* CALayer+zRotation360Degrees.swift */,
+				4473A30621F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift */,
 				44C4817E21C66C6000F96EB8 /* LoaderViewStyle.swift */,
-				44C4817F21C66C6000F96EB8 /* CometGradientLoaderView.swift */,
-				44C6B7CF21C680EE007C1330 /* CometReplicationLoaderView.swift */,
-				44C4818021C66C6000F96EB8 /* CometLoaderView.swift */,
-				443F2C7821C837C200CDE0A3 /* CometGrapeLoaderView.swift */,
+				443F2C7821C837C200CDE0A3 /* CircularLoaderView.swift */,
 				44C4818121C66C6000F96EB8 /* LoadingIndicator.swift */,
 			);
 			path = LoadingIndicator;
@@ -270,28 +264,26 @@
 			files = (
 				449CF07121F405EC00C879D7 /* Collection+AtLeastOne.swift in Sources */,
 				449CF07321F40D0200C879D7 /* CAAnimation+Animation.swift in Sources */,
-				4473A30121F529DA00E8C0C5 /* FlatCircularActivityIndicatorCreator.swift in Sources */,
 				449CF05B21F3DEB500C879D7 /* CABasicAnimation+Animation.swift in Sources */,
-				44C4818321C66C6000F96EB8 /* CometGradientLoaderView.swift in Sources */,
 				44C4816C21C669D000F96EB8 /* AppDelegate.swift in Sources */,
 				44C4818C21C66E2A00F96EB8 /* LoadingCell.swift in Sources */,
 				449CF06621F3E53B00C879D7 /* CALayer+AnimatableProperty.swift in Sources */,
 				449CF06421F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift in Sources */,
-				44C4818721C66C7100F96EB8 /* CALayer+zRotation360Degrees.swift in Sources */,
 				449CF06C21F3FF9500C879D7 /* CAReplicatorLayer+AnimatableProperty.swift in Sources */,
 				449CF06A21F3FF1200C879D7 /* CAGradientLayer+AnimatableKey.swift in Sources */,
 				449CF05D21F3DFFE00C879D7 /* Collection+NotEmpty.swift in Sources */,
+				4473A30721F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift in Sources */,
 				449CF07021F400DC00C879D7 /* CAPropertyAnimation+Key.swift in Sources */,
 				44C4818521C66C6000F96EB8 /* LoadingIndicator.swift in Sources */,
-				443F2C7921C837C200CDE0A3 /* CometGrapeLoaderView.swift in Sources */,
-				4473A2FF21F5295500E8C0C5 /* ActivityIndicatorLayerCreator.swift in Sources */,
-				44C6B7D021C680EE007C1330 /* CometReplicationLoaderView.swift in Sources */,
-				44C4818421C66C6000F96EB8 /* CometLoaderView.swift in Sources */,
+				443F2C7921C837C200CDE0A3 /* CircularLoaderView.swift in Sources */,
+				4473A2FF21F5295500E8C0C5 /* LoadingIndicatorDrawerProtocol.swift in Sources */,
 				44C4818221C66C6000F96EB8 /* LoaderViewStyle.swift in Sources */,
 				443F2C7C21C90C2100CDE0A3 /* Setupable.swift in Sources */,
 				443F2C8321C9142800CDE0A3 /* Collection+Safe.swift in Sources */,
 				449CF06821F3FE3D00C879D7 /* CAEmmiterLayer+AnimatableProperties.swift in Sources */,
 				44C4818921C66CF100F96EB8 /* LoadingIndicatorViewController.swift in Sources */,
+				4473A30321F7A8A400E8C0C5 /* CircularLoadingIndicatorDrawerProtocol.swift in Sources */,
+				4473A30521F7AB6B00E8C0C5 /* CircularLoadingIndicatorDrawer.swift in Sources */,
 				449CF06E21F4005D00C879D7 /* CATextLayer+AnimatableProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

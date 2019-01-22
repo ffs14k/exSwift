@@ -12,34 +12,8 @@ final class LoadingCell: UITableViewCell {
     
     // MARK: - Properties
     
-    
-//        This two guys stops their animation when out of screen because rotate animation became nil
-//
-//        private lazy var loadingIndicator: LoadingIndicator = {
-//            let loadingIndicator = CometLoaderView(style: .regular)
-//            return loadingIndicator
-//        }()
-//    
-//        private lazy var loadingIndicator: LoadingIndicator = {
-//            let loadingIndicator = CometGradientLoaderView(style: .regular)
-//            return loadingIndicator
-//        }()
-//        --------------------------------------------------------------------
-    
-    
-//        This guy became a circle if an application enter background
-//    
-//        private lazy var loadingIndicator: LoadingIndicator = {
-//            let loadingIndicator = CometReplicationLoaderView(style: .regular)
-//            return loadingIndicator
-//        }()
-//       ----------------------------------------------------------------
-    
-    
-//    This guy, undoubtedly, is your bro!
-//
     private lazy var loadingIndicator: LoadingIndicator = {
-        let loadingIndicator = CometGrapeLoaderView(style: .regular)
+        let loadingIndicator = CircularLoaderView(style: .flat(type: .regular))
         return loadingIndicator
     }()
     

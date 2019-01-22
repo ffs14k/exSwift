@@ -1,5 +1,5 @@
 //
-//  LoadingIndicatorViewController.swift
+//  LoadingIndicatorStyle.swift
 //  exSwift
 //
 //  Created by Eugene on 16/12/2018.
@@ -8,43 +8,25 @@
 
 import UIKit
 
-enum FlatLoaderStyle {
-    
-    case small
-    case regular
-    
-    var size: CGSize {
-        switch self {
-        case .small:        return CGSize(width: 20, height: 20)
-        case .regular:      return CGSize(width: 40, height: 40)
-        }
-    }
-    
-    var circleWidth: CGFloat {
-        switch self {
-        case .small:        return 1
-        case .regular:      return 2
-        }
-    }
-    
-}
+private let defaultBackgroundColor: CGColor = UIColor.clear.cgColor
+private let defaultCircleColor: CGColor = UIColor.black.cgColor
+private let defaultRotateDuration: CFTimeInterval = 1
 
-enum GradientLoaderStyle {
+enum CircularActivityIndicatorStyle {
     
-    case small
-    case regular
+    case flat(type: СircleActivityIndicatorType)
     
-    var size: CGSize {
+    var drawer: CircularActivityIndicatorDrawerProtocol {
+        
         switch self {
-        case .small:        return CGSize(width: 20, height: 20)
-        case .regular:      return CGSize(width: 40, height: 40)
-        }
-    }
-    
-    var circleWidth: CGFloat {
-        switch self {
-        case .small:        return 0.2
-        case .regular:      return 0.8
+            
+        case .flat(let type):
+            
+            let drawer = CircularActivityIndicatorDrawer(size: type.size, backgroundColor: defaultBackgroundColor,
+                                                         circleWidth: type.circleWidth, circleColor: defaultCircleColor,
+                                                         rotateDuration: defaultRotateDuration)
+            
+            return drawer
         }
     }
     
