@@ -12,8 +12,8 @@ final class LoadingCell: UITableViewCell {
     
     // MARK: - Properties
     
-    private lazy var loadingIndicator: LoadingIndicator = {
-        let loadingIndicator = CircularLoaderView(style: .flat(type: .regular))
+    private lazy var loadingIndicator: ActivityIndicator = {
+        let loadingIndicator = CircularActivityIndicator(style: .flat(type: .regular))
         return loadingIndicator
     }()
     

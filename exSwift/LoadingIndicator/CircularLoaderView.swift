@@ -14,8 +14,7 @@ private let radiusScale: CGFloat = 0.85
 private let radiusInset: CGFloat = 0
 
 
-// Circular flat progress view
-final class CircularLoaderView: UIView, LoadingIndicator {
+final class CircularActivityIndicator: UIView, ActivityIndicator {
     
     // MARK: - Public properties
     
@@ -23,18 +22,21 @@ final class CircularLoaderView: UIView, LoadingIndicator {
         return alpha == 1 ? true : false
     }
     
+    var isUserInteractionAllowedWhileAnimating: Bool
+    
     
     // MARK: - Private properties
     
     private let drawer: CircularActivityIndicatorDrawerProtocol
     private var activityIndicatorLayer: CALayer! = CALayer()
-    
+    private var _isUserInteractionAllowedWhileAnimating = false
     
     // MARK: - Init
     
     init(style: CircularActivityIndicatorStyle) {
         
-        self.drawer = style.drawer
+        isUserInteractionAllowedWhileAnimating = false
+        drawer = style.drawer
         super.init(frame: .zero)
         drawSelf()
     }
@@ -51,6 +53,7 @@ final class CircularLoaderView: UIView, LoadingIndicator {
         alpha = 0
         backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
+        // frames
         widthAnchor.constraint(equalToConstant: drawer.size.width).isActive = true
         heightAnchor.constraint(equalToConstant: drawer.size.height).isActive = true
         layer.addSublayer(activityIndicatorLayer)
@@ -71,11 +74,11 @@ final class CircularLoaderView: UIView, LoadingIndicator {
     
     func start() {
         
-        superview?.isUserInteractionEnabled = false
+        !_isUserInteractionAllowedWhileAnimating ? superview?.isUserInteractionEnabled = false : ()
         superview?.bringSubviewToFront(self)
         redrawLoader()
         
-        UIView.animate(withDuration: 0, delay: 0, options: [.beginFromCurrentState], animations: {
+        UIView.animate(withDuration: appearanceDuration, delay: 0, options: [.beginFromCurrentState], animations: {
             self.alpha = 1
         }, completion: nil)
         
@@ -90,6 +93,7 @@ final class CircularLoaderView: UIView, LoadingIndicator {
             self.superview?.sendSubviewToBack(self)
             self.resetLoader()
         })
+        
     }
     
     

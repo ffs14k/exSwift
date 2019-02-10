@@ -8,29 +8,19 @@
 
 import UIKit
 
-protocol LoadingIndicator {
+protocol ActivityIndicator {
     
     var view: UIView { get }
     var isAnimating: Bool { get }
+    var isUserInteractionAllowedWhileAnimating: Bool { get set }
     func start()
     func stop()
 }
 
-extension LoadingIndicator where Self: UIView {
+extension ActivityIndicator where Self: UIView {
     
     var view: UIView {
         return self
-    }
-}
-
-extension UIActivityIndicatorView: LoadingIndicator {
-    
-    func start() {
-        startAnimating()
-    }
-    
-    func stop() {
-        stopAnimating()
     }
     
 }
