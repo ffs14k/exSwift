@@ -15,7 +15,7 @@ extension DateFormatter {
         case HHmm
         case dayName
         case yyyyMMdd_T_000000
-        case yyyMMdd_T_235959
+        case yyyyMMdd_T_235959
         case yyyyMMdd_T_HHmmss
 
         
@@ -24,7 +24,7 @@ extension DateFormatter {
             case .HHmm:              return "HH:mm"
             case .dayName:           return "EEEE"
             case .yyyyMMdd_T_000000: return "yyyy-MM-dd'T'00:00:00"
-            case .yyyMMdd_T_235959:  return "yyyy-MM-dd'T'23:59:59"
+            case .yyyyMMdd_T_235959:  return "yyyy-MM-dd'T'23:59:59"
             case .yyyyMMdd_T_HHmmss: return "yyyy-MM-dd'T'HH:mm:ss"
             }
         }

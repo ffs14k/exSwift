@@ -10,6 +10,10 @@ import Foundation
 
 extension Date {
     
+    var inMilliseconds: Int {
+        return Int(self.timeIntervalSince1970 * 1000)
+    }
+    
     static var nowInMilliseconds: Int {
         return Int(Date().timeIntervalSince1970 * 1000)
     }
