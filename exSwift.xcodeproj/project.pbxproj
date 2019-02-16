@@ -10,6 +10,7 @@
 		443F2C7921C837C200CDE0A3 /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C7821C837C200CDE0A3 /* CircularLoaderView.swift */; };
 		443F2C7C21C90C2100CDE0A3 /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C7B21C90C2100CDE0A3 /* Setupable.swift */; };
 		443F2C8321C9142800CDE0A3 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C8221C9142800CDE0A3 /* Collection+Safe.swift */; };
+		4456AC2E22185A5800CA4A4E /* CGRect+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456AC2D22185A5800CA4A4E /* CGRect+Helpers.swift */; };
 		446C7CD222102E0700BF04BC /* Date+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7CCE22102E0700BF04BC /* Date+Convert.swift */; };
 		446C7CD322102E0700BF04BC /* Date+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7CCF22102E0700BF04BC /* Date+Day.swift */; };
 		446C7CD422102E0700BF04BC /* DateFormatter+FormatKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7CD022102E0700BF04BC /* DateFormatter+FormatKey.swift */; };
@@ -40,6 +41,7 @@
 		443F2C7821C837C200CDE0A3 /* CircularLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLoaderView.swift; sourceTree = "<group>"; };
 		443F2C7B21C90C2100CDE0A3 /* Setupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
 		443F2C8221C9142800CDE0A3 /* Collection+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		4456AC2D22185A5800CA4A4E /* CGRect+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Helpers.swift"; sourceTree = "<group>"; };
 		446C7CCE22102E0700BF04BC /* Date+Convert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Convert.swift"; sourceTree = "<group>"; };
 		446C7CCF22102E0700BF04BC /* Date+Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Day.swift"; sourceTree = "<group>"; };
 		446C7CD022102E0700BF04BC /* DateFormatter+FormatKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+FormatKey.swift"; sourceTree = "<group>"; };
@@ -88,13 +90,21 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		4456AC2B2218590F00CA4A4E /* CoreAnimation */ = {
+		4456AC2B2218590F00CA4A4E /* QuartzCore */ = {
 			isa = PBXGroup;
 			children = (
 				449CF05721F3DD1E00C879D7 /* CAAnimations+Animation */,
 				449CF06021F3E40900C879D7 /* CALayers+AnimatablePropery */,
 			);
-			path = CoreAnimation;
+			path = QuartzCore;
+			sourceTree = "<group>";
+		};
+		4456AC2C22185A3E00CA4A4E /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				4456AC2D22185A5800CA4A4E /* CGRect+Helpers.swift */,
+			);
+			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
 		446C7CCB22102D9300BF04BC /* Foundation */ = {
@@ -138,7 +148,8 @@
 		449CF05221F3DC0E00C879D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4456AC2B2218590F00CA4A4E /* CoreAnimation */,
+				4456AC2C22185A3E00CA4A4E /* CoreGraphics */,
+				4456AC2B2218590F00CA4A4E /* QuartzCore */,
 				449CF05321F3DCDC00C879D7 /* Collection */,
 				446C7CCB22102D9300BF04BC /* Foundation */,
 			);
@@ -321,6 +332,7 @@
 				443F2C7C21C90C2100CDE0A3 /* Setupable.swift in Sources */,
 				443F2C8321C9142800CDE0A3 /* Collection+Safe.swift in Sources */,
 				449CF06821F3FE3D00C879D7 /* CAEmmiterLayer+AnimatableProperties.swift in Sources */,
+				4456AC2E22185A5800CA4A4E /* CGRect+Helpers.swift in Sources */,
 				446C7CD422102E0700BF04BC /* DateFormatter+FormatKey.swift in Sources */,
 				446C7CD322102E0700BF04BC /* Date+Day.swift in Sources */,
 				44C4818921C66CF100F96EB8 /* LoadingIndicatorViewController.swift in Sources */,
