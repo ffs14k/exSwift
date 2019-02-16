@@ -15,15 +15,10 @@ extension Date {
                         toFormat: DateFormatter.FormatKey,
                         formatter: DateFormatter? = nil) -> String? {
         
-        let dateFormatter: DateFormatter
         
-        if let formatter = formatter {
-            dateFormatter = formatter
-        } else {
-            dateFormatter = DateFormatter()
-        }
-        
+        let dateFormatter = formatter == nil ? DateFormatter() : formatter!
         dateFormatter.dateFormat = inFormat.format
+        
         guard let formattedDate = dateFormatter.date(from: date) else { return nil }
         dateFormatter.dateFormat = toFormat.format
         
@@ -37,16 +32,10 @@ extension Date {
                         locale: Locale.LocaleKey,
                         formatter: DateFormatter? = nil) -> String? {
         
-        let dateFormatter: DateFormatter
-        
-        if let formatter = formatter {
-            dateFormatter = formatter
-        } else {
-            dateFormatter = DateFormatter()
-        }
-        
+        let dateFormatter = formatter == nil ? DateFormatter() : formatter!
         dateFormatter.dateFormat = inFormat.format
         dateFormatter.locale = Locale(identifier: locale.identifier)
+        
         guard let formattedDate = dateFormatter.date(from: date) else { return nil }
         dateFormatter.dateFormat = toFormat.format
         

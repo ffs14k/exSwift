@@ -16,14 +16,7 @@ extension Date {
         
         let date = Date(timeIntervalSinceNow: TimeInterval(dayInSeconds * addingDays))
         
-        let dateFormatter: DateFormatter
-        
-        if let formatter = formatter {
-            dateFormatter = formatter
-        } else {
-            dateFormatter = DateFormatter()
-        }
-        
+        let dateFormatter = formatter == nil ? DateFormatter() : formatter!
         dateFormatter.dateFormat = formatKey.format
         
         return dateFormatter.string(from: date)
@@ -38,14 +31,7 @@ extension Date {
         
         let date = Date(timeIntervalSinceNow: TimeInterval(dayInSeconds * addingDays))
         
-        let dateFormatter: DateFormatter
-        
-        if let formatter = formatter {
-            dateFormatter = formatter
-        } else {
-            dateFormatter = DateFormatter()
-        }
-        
+        let dateFormatter = formatter == nil ? DateFormatter() : formatter!
         dateFormatter.dateFormat = formatKey.format
         dateFormatter.locale = Locale(identifier: locale.identifier)
         

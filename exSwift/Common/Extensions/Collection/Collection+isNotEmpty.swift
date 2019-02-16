@@ -1,5 +1,5 @@
 //
-//  Collection+NotEmpty.swift
+//  Collection+isNotEmpty.swift
 //  exSwift
 //
 //  Created by Eugene on 20/01/2019.

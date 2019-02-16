@@ -26,15 +26,9 @@ extension Date {
                                dateFormat: DateFormatter.FormatKey,
                                formatter: DateFormatter? = nil) -> Int? {
         
-        let dateFormatter: DateFormatter
-        
-        if let formatter = formatter {
-            dateFormatter = formatter
-        } else {
-            dateFormatter = DateFormatter()
-        }
-        
+        let dateFormatter = formatter == nil ? DateFormatter() : formatter!
         dateFormatter.dateFormat = dateFormat.format
+        
         guard let date = dateFormatter.date(from: date) else { return nil }
         
         return Int(date.timeIntervalSince1970 * 1000)
@@ -45,16 +39,10 @@ extension Date {
                                dateLocale: Locale.LocaleKey,
                                formatter: DateFormatter? = nil) -> Int? {
         
-        let dateFormatter: DateFormatter
-        
-        if let formatter = formatter {
-            dateFormatter = formatter
-        } else {
-            dateFormatter = DateFormatter()
-        }
-        
+        let dateFormatter = formatter == nil ? DateFormatter() : formatter!
         dateFormatter.dateFormat = dateFormat.format
         dateFormatter.locale = Locale(identifier: dateLocale.identifier)
+        
         guard let date = dateFormatter.date(from: date) else { return nil }
         
         return Int(date.timeIntervalSince1970 * 1000)
