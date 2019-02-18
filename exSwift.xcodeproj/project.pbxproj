@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4406BF33221A98E400E2FCF6 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406BF32221A98E400E2FCF6 /* NetworkService.swift */; };
+		4406BF38221AEC5500E2FCF6 /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406BF37221AEC5500E2FCF6 /* EndpointProtocol.swift */; };
+		4406BF3A221AEC7700E2FCF6 /* HTTPRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406BF39221AEC7700E2FCF6 /* HTTPRequestProtocol.swift */; };
+		4406BF3C221AECB700E2FCF6 /* AnyNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4406BF3B221AECB700E2FCF6 /* AnyNetworkRequest.swift */; };
 		443F2C7921C837C200CDE0A3 /* CircularLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C7821C837C200CDE0A3 /* CircularLoaderView.swift */; };
 		443F2C7C21C90C2100CDE0A3 /* Setupable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C7B21C90C2100CDE0A3 /* Setupable.swift */; };
 		443F2C8321C9142800CDE0A3 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C8221C9142800CDE0A3 /* Collection+Safe.swift */; };
@@ -38,6 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4406BF32221A98E400E2FCF6 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4406BF37221AEC5500E2FCF6 /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		4406BF39221AEC7700E2FCF6 /* HTTPRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestProtocol.swift; sourceTree = "<group>"; };
+		4406BF3B221AECB700E2FCF6 /* AnyNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyNetworkRequest.swift; sourceTree = "<group>"; };
 		443F2C7821C837C200CDE0A3 /* CircularLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLoaderView.swift; sourceTree = "<group>"; };
 		443F2C7B21C90C2100CDE0A3 /* Setupable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setupable.swift; sourceTree = "<group>"; };
 		443F2C8221C9142800CDE0A3 /* Collection+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
@@ -81,6 +89,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4406BF30221A98C700E2FCF6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4406BF31221A98D800E2FCF6 /* Net */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4406BF31221A98D800E2FCF6 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				4406BF36221AEC4200E2FCF6 /* Protocols */,
+				4406BF32221A98E400E2FCF6 /* NetworkService.swift */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		4406BF36221AEC4200E2FCF6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4406BF37221AEC5500E2FCF6 /* EndpointProtocol.swift */,
+				4406BF39221AEC7700E2FCF6 /* HTTPRequestProtocol.swift */,
+				4406BF3B221AECB700E2FCF6 /* AnyNetworkRequest.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		443F2C7A21C90C1200CDE0A3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +249,7 @@
 		44C4816A21C669D000F96EB8 /* exSwift */ = {
 			isa = PBXGroup;
 			children = (
+				4406BF30221A98C700E2FCF6 /* Core */,
 				443F2C7A21C90C1200CDE0A3 /* Common */,
 				44C4817D21C66C6000F96EB8 /* LoadingIndicator */,
 				44C4816B21C669D000F96EB8 /* AppDelegate.swift */,
@@ -320,10 +356,14 @@
 				446C7CDA2210350600BF04BC /* Locale+LocaleKey.swift in Sources */,
 				449CF06621F3E53B00C879D7 /* CALayer+AnimatableProperty.swift in Sources */,
 				449CF06421F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift in Sources */,
+				4406BF3C221AECB700E2FCF6 /* AnyNetworkRequest.swift in Sources */,
+				4406BF3A221AEC7700E2FCF6 /* HTTPRequestProtocol.swift in Sources */,
+				4406BF33221A98E400E2FCF6 /* NetworkService.swift in Sources */,
 				449CF06C21F3FF9500C879D7 /* CAReplicatorLayer+AnimatableProperty.swift in Sources */,
 				449CF06A21F3FF1200C879D7 /* CAGradientLayer+AnimatableKey.swift in Sources */,
 				449CF05D21F3DFFE00C879D7 /* Collection+isNotEmpty.swift in Sources */,
 				4473A30721F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift in Sources */,
+				4406BF38221AEC5500E2FCF6 /* EndpointProtocol.swift in Sources */,
 				449CF07021F400DC00C879D7 /* CAPropertyAnimation+Key.swift in Sources */,
 				44C4818521C66C6000F96EB8 /* LoadingIndicator.swift in Sources */,
 				443F2C7921C837C200CDE0A3 /* CircularLoaderView.swift in Sources */,
