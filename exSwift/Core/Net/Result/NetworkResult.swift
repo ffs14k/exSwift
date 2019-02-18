@@ -12,7 +12,7 @@ enum NetworkError: Error {
     case emptyResponse
     case serverError
     case emptyData
-    case decodingError
+    case decodeFailed(DecodingError)
 }
 
 enum NetworkResult<T: Codable> {

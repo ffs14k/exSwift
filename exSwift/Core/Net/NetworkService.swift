@@ -10,16 +10,26 @@ import Foundation
 
 final class NetworkService {
     
-    private let session: URLSession
+    // MARK: - Properties
     
+    private let session: URLSession
+    private let decoder = JSONDecoder()
+    
+    
+    // MARK: - Init
     
     init(session: URLSession) {
         self.session = session
     }
     
+    
+    // MARK: - Public methods
+    
     func request<Model: Codable>(urlRequest: AnyHTTPRequest, completion: @escaping (NetworkResult<Model>) -> Void ) {
         
-        session.dataTask(with: urlRequest.request) { (data, response, error) in
+        session.dataTask(with: urlRequest.request) { [weak self] (data, response, error) in
+            
+            guard let `self` = self else { return }
             
             var result: NetworkResult<Model>
             
@@ -42,16 +52,14 @@ final class NetworkService {
                 return
             }
             
-            let decoder = JSONDecoder()
-            
             do {
                 
-                let object = try decoder.decode(Model.self, from: data)
+                let object = try self.decoder.decode(Model.self, from: data)
                 result = .success(object)
                 
-            } catch {
+            } catch let error {
                 
-                result = .failure(.decodingError)
+                result = NetworkResult.failure(NetworkError.decodeFailed(error as! DecodingError))
             }
             
             defer {

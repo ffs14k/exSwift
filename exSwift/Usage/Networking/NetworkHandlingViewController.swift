@@ -23,7 +23,7 @@ final class NetworkHandlingViewController: UIViewController {
             
             switch result {
             case .success(let model):
-                
+                return
                 model.forEach({
                     print($0.comment)
                 })
