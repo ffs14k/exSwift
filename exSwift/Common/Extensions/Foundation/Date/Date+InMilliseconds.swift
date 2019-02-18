@@ -10,34 +10,34 @@ import Foundation
 
 extension Date {
     
-    var inMilliseconds: Int {
-        return Int(self.timeIntervalSince1970 * 1000)
+    var inMilliseconds: Int64 {
+        return Int64(self.timeIntervalSince1970 * 1000)
     }
     
-    static var nowInMilliseconds: Int {
-        return Int(Date().timeIntervalSince1970 * 1000)
+    static var nowInMilliseconds: Int64 {
+        return Int64(Date().timeIntervalSince1970 * 1000)
     }
     
-    static func inMilliseconds(from date: Date) -> Int {
-        return Int(date.timeIntervalSince1970 * 1000)
+    static func inMilliseconds(from date: Date) -> Int64 {
+        return Int64(date.timeIntervalSince1970 * 1000)
     }
     
     static func inMilliseconds(from date: String,
                                dateFormat: DateFormatter.FormatKey,
-                               formatter: DateFormatter? = nil) -> Int? {
+                               formatter: DateFormatter? = nil) -> Int64? {
         
         let dateFormatter = formatter == nil ? DateFormatter() : formatter!
         dateFormatter.dateFormat = dateFormat.format
         
         guard let date = dateFormatter.date(from: date) else { return nil }
         
-        return Int(date.timeIntervalSince1970 * 1000)
+        return date.inMilliseconds
     }
     
     static func inMilliseconds(from date: String,
                                dateFormat: DateFormatter.FormatKey,
                                dateLocale: Locale.LocaleKey,
-                               formatter: DateFormatter? = nil) -> Int? {
+                               formatter: DateFormatter? = nil) -> Int64? {
         
         let dateFormatter = formatter == nil ? DateFormatter() : formatter!
         dateFormatter.dateFormat = dateFormat.format
@@ -45,7 +45,7 @@ extension Date {
         
         guard let date = dateFormatter.date(from: date) else { return nil }
         
-        return Int(date.timeIntervalSince1970 * 1000)
+        return date.inMilliseconds
     }
     
 }
