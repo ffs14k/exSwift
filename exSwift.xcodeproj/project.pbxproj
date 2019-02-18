@@ -24,6 +24,10 @@
 		4473A30321F7A8A400E8C0C5 /* CircularLoadingIndicatorDrawerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A30221F7A8A400E8C0C5 /* CircularLoadingIndicatorDrawerProtocol.swift */; };
 		4473A30521F7AB6B00E8C0C5 /* CircularLoadingIndicatorDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A30421F7AB6B00E8C0C5 /* CircularLoadingIndicatorDrawer.swift */; };
 		4473A30721F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4473A30621F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift */; };
+		44982CDC221B14FD00A4B49E /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982CDB221B14FD00A4B49E /* NetworkResult.swift */; };
+		44982CE3221B17B500A4B49E /* JSONPlaceholderNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982CE2221B17B500A4B49E /* JSONPlaceholderNetworkService.swift */; };
+		44982CE5221B1EDB00A4B49E /* CommentRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982CE4221B1EDB00A4B49E /* CommentRemote.swift */; };
+		44982CE7221B20B700A4B49E /* NetworkHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982CE6221B20B700A4B49E /* NetworkHandlingViewController.swift */; };
 		449CF05B21F3DEB500C879D7 /* CABasicAnimation+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF05A21F3DEB500C879D7 /* CABasicAnimation+Animation.swift */; };
 		449CF05D21F3DFFE00C879D7 /* Collection+isNotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF05C21F3DFFE00C879D7 /* Collection+isNotEmpty.swift */; };
 		449CF06421F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF06321F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift */; };
@@ -59,6 +63,10 @@
 		4473A30221F7A8A400E8C0C5 /* CircularLoadingIndicatorDrawerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLoadingIndicatorDrawerProtocol.swift; sourceTree = "<group>"; };
 		4473A30421F7AB6B00E8C0C5 /* CircularLoadingIndicatorDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularLoadingIndicatorDrawer.swift; sourceTree = "<group>"; };
 		4473A30621F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СircleActivityIndicatorType.swift"; sourceTree = "<group>"; };
+		44982CDB221B14FD00A4B49E /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		44982CE2221B17B500A4B49E /* JSONPlaceholderNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderNetworkService.swift; sourceTree = "<group>"; };
+		44982CE4221B1EDB00A4B49E /* CommentRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRemote.swift; sourceTree = "<group>"; };
+		44982CE6221B20B700A4B49E /* NetworkHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandlingViewController.swift; sourceTree = "<group>"; };
 		449CF05A21F3DEB500C879D7 /* CABasicAnimation+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Animation.swift"; sourceTree = "<group>"; };
 		449CF05C21F3DFFE00C879D7 /* Collection+isNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+isNotEmpty.swift"; sourceTree = "<group>"; };
 		449CF06321F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+AnimatableProperty.swift"; sourceTree = "<group>"; };
@@ -100,6 +108,7 @@
 		4406BF31221A98D800E2FCF6 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				44982CDA221B14DE00A4B49E /* Result */,
 				4406BF36221AEC4200E2FCF6 /* Protocols */,
 				4406BF32221A98E400E2FCF6 /* NetworkService.swift */,
 			);
@@ -180,6 +189,33 @@
 			path = LoadingIndicatorDrawer;
 			sourceTree = "<group>";
 		};
+		44982CDA221B14DE00A4B49E /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				44982CDB221B14FD00A4B49E /* NetworkResult.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		44982CDD221B15C100A4B49E /* LodingIndicators */ = {
+			isa = PBXGroup;
+			children = (
+				44C4818821C66CF100F96EB8 /* LoadingIndicatorViewController.swift */,
+				44C4818B21C66E2A00F96EB8 /* LoadingCell.swift */,
+			);
+			path = LodingIndicators;
+			sourceTree = "<group>";
+		};
+		44982CDE221B15F300A4B49E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				44982CE2221B17B500A4B49E /* JSONPlaceholderNetworkService.swift */,
+				44982CE4221B1EDB00A4B49E /* CommentRemote.swift */,
+				44982CE6221B20B700A4B49E /* NetworkHandlingViewController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		449CF05221F3DC0E00C879D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +285,7 @@
 		44C4816A21C669D000F96EB8 /* exSwift */ = {
 			isa = PBXGroup;
 			children = (
+				44C4818A21C66CF400F96EB8 /* Usage */,
 				4406BF30221A98C700E2FCF6 /* Core */,
 				443F2C7A21C90C1200CDE0A3 /* Common */,
 				44C4817D21C66C6000F96EB8 /* LoadingIndicator */,
@@ -263,7 +300,6 @@
 			isa = PBXGroup;
 			children = (
 				4473A2FD21F5293200E8C0C5 /* LoadingIndicatorDrawer */,
-				44C4818A21C66CF400F96EB8 /* Usage */,
 				4473A30621F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift */,
 				44C4817E21C66C6000F96EB8 /* LoaderViewStyle.swift */,
 				443F2C7821C837C200CDE0A3 /* CircularLoaderView.swift */,
@@ -275,8 +311,8 @@
 		44C4818A21C66CF400F96EB8 /* Usage */ = {
 			isa = PBXGroup;
 			children = (
-				44C4818821C66CF100F96EB8 /* LoadingIndicatorViewController.swift */,
-				44C4818B21C66E2A00F96EB8 /* LoadingCell.swift */,
+				44982CDD221B15C100A4B49E /* LodingIndicators */,
+				44982CDE221B15F300A4B49E /* Networking */,
 			);
 			path = Usage;
 			sourceTree = "<group>";
@@ -358,8 +394,10 @@
 				449CF06421F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift in Sources */,
 				4406BF3C221AECB700E2FCF6 /* AnyNetworkRequest.swift in Sources */,
 				4406BF3A221AEC7700E2FCF6 /* HTTPRequestProtocol.swift in Sources */,
+				44982CE3221B17B500A4B49E /* JSONPlaceholderNetworkService.swift in Sources */,
 				4406BF33221A98E400E2FCF6 /* NetworkService.swift in Sources */,
 				449CF06C21F3FF9500C879D7 /* CAReplicatorLayer+AnimatableProperty.swift in Sources */,
+				44982CE5221B1EDB00A4B49E /* CommentRemote.swift in Sources */,
 				449CF06A21F3FF1200C879D7 /* CAGradientLayer+AnimatableKey.swift in Sources */,
 				449CF05D21F3DFFE00C879D7 /* Collection+isNotEmpty.swift in Sources */,
 				4473A30721F7B3F700E8C0C5 /* СircleActivityIndicatorType.swift in Sources */,
@@ -373,7 +411,9 @@
 				443F2C8321C9142800CDE0A3 /* Collection+Safe.swift in Sources */,
 				449CF06821F3FE3D00C879D7 /* CAEmmiterLayer+AnimatableProperties.swift in Sources */,
 				4456AC2E22185A5800CA4A4E /* CGRect+Helpers.swift in Sources */,
+				44982CDC221B14FD00A4B49E /* NetworkResult.swift in Sources */,
 				446C7CD422102E0700BF04BC /* DateFormatter+FormatKey.swift in Sources */,
+				44982CE7221B20B700A4B49E /* NetworkHandlingViewController.swift in Sources */,
 				446C7CD322102E0700BF04BC /* Date+Day.swift in Sources */,
 				44C4818921C66CF100F96EB8 /* LoadingIndicatorViewController.swift in Sources */,
 				446C7CD522102E0700BF04BC /* Date+InMilliseconds.swift in Sources */,

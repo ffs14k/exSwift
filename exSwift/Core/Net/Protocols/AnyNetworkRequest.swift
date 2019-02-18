@@ -8,21 +8,21 @@
 
 import Foundation
 
-protocol AnyNetworkRequest: EndpointProtocol, HTTPRequestProtocol {
+protocol AnyHTTPRequest: EndpointProtocol, HTTPRequestProtocol {
     
 }
 
-extension AnyNetworkRequest {
+extension AnyHTTPRequest {
     
     var scheme: String {
         return "https"
     }
     
-    var headers: [String: String]? {
+    var headers: [String: Any]? {
         return nil
     }
     
-    var queryItems: [String: String]? {
+    var queryItems: [String: Any?]? {
         return nil
     }
     
@@ -33,16 +33,19 @@ extension AnyNetworkRequest {
         comp.host = domain.absoluteString
         comp.path = path ?? ""
         
-        comp.queryItems = queryItems?.map({ (key: String, value: String) -> URLQueryItem in
-            return URLQueryItem(name: key, value: value)
-        })
+        comp.queryItems = queryItems?.map({ (key: String, value: Any?) -> URLQueryItem? in
+            
+            guard let value = value else { return nil }
+            return URLQueryItem(name: key, value: String(describing: value))
+        }).compactMap{ $0 }
         
         var req = URLRequest(url: comp.url!)
         
-        headers?.forEach({ (key: String, value: String) in
-            req.setValue(key, forHTTPHeaderField: value)
+        headers?.forEach({ (key: String, value: Any) in
+            req.setValue(String(describing: value), forHTTPHeaderField: key)
         })
         
         return req
     }
+    
 }

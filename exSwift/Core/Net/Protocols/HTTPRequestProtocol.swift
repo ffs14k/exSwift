@@ -9,6 +9,6 @@
 protocol HTTPRequestProtocol {
     
     var scheme: String { get }
-    var headers: [String: String]? { get }
-    var queryItems: [String: String]? { get }
+    var headers: [String: Any]? { get }
+    var queryItems: [String: Any?]? { get }
 }
