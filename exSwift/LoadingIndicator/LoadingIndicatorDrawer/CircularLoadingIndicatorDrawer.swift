@@ -65,13 +65,14 @@ struct CircularActivityIndicatorDrawer: CircularActivityIndicatorDrawerProtocol 
             grapeLayer.backgroundColor = circleColor
             
             grapeAnimationDelay += Double(rotateDuration * Double(step) / 360)
-            let rotateGrapeAnimation = CAKeyframeAnimation(keyPath: "position")
+            
+            let rotateGrapeAnimation = CAKeyframeAnimation(.caLayer(.position),
+                                                           duration: rotateDuration,
+                                                           beginTime: grapeAnimationDelay)
             rotateGrapeAnimation.path = path
-            rotateGrapeAnimation.beginTime = grapeAnimationDelay
             rotateGrapeAnimation.calculationMode = .linear
             rotateGrapeAnimation.repeatCount = .infinity
             rotateGrapeAnimation.isRemovedOnCompletion = false
-            rotateGrapeAnimation.duration = rotateDuration
             
             grapeLayer.add(rotateGrapeAnimation, forKey: nil)
             

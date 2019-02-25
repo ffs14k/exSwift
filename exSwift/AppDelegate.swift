@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         
         
-//        let usageExample = LoadingIndicatorViewCosntroller()
-        let usageExample = NetworkHandlingViewController()
+        let usageExample = LoadingIndicatorViewController()
+//        let usageExample = NetworkHandlingViewController()
         
         window?.rootViewController = usageExample
         window?.makeKeyAndVisible()

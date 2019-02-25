@@ -16,6 +16,7 @@
 		443F2C8321C9142800CDE0A3 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F2C8221C9142800CDE0A3 /* Collection+Safe.swift */; };
 		4456AC2E22185A5800CA4A4E /* CGRect+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4456AC2D22185A5800CA4A4E /* CGRect+Helpers.swift */; };
 		4462779F2224734800D279F5 /* UIDevice+ModelName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4462779E2224734800D279F5 /* UIDevice+ModelName.swift */; };
+		446277A1222475F900D279F5 /* CAKeyframeAnimation+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446277A0222475F900D279F5 /* CAKeyframeAnimation+Inits.swift */; };
 		446C7CD222102E0700BF04BC /* Date+Convert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7CCE22102E0700BF04BC /* Date+Convert.swift */; };
 		446C7CD322102E0700BF04BC /* Date+Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7CCF22102E0700BF04BC /* Date+Day.swift */; };
 		446C7CD422102E0700BF04BC /* DateFormatter+FormatKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446C7CD022102E0700BF04BC /* DateFormatter+FormatKey.swift */; };
@@ -29,7 +30,7 @@
 		44982CE3221B17B500A4B49E /* JSONPlaceholderNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982CE2221B17B500A4B49E /* JSONPlaceholderNetworkService.swift */; };
 		44982CE5221B1EDB00A4B49E /* CommentRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982CE4221B1EDB00A4B49E /* CommentRemote.swift */; };
 		44982CE7221B20B700A4B49E /* NetworkHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44982CE6221B20B700A4B49E /* NetworkHandlingViewController.swift */; };
-		449CF05B21F3DEB500C879D7 /* CABasicAnimation+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF05A21F3DEB500C879D7 /* CABasicAnimation+Animation.swift */; };
+		449CF05B21F3DEB500C879D7 /* CABasicAnimation+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF05A21F3DEB500C879D7 /* CABasicAnimation+Inits.swift */; };
 		449CF05D21F3DFFE00C879D7 /* Collection+isNotEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF05C21F3DFFE00C879D7 /* Collection+isNotEmpty.swift */; };
 		449CF06421F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF06321F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift */; };
 		449CF06621F3E53B00C879D7 /* CALayer+AnimatableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449CF06521F3E53B00C879D7 /* CALayer+AnimatableProperty.swift */; };
@@ -56,6 +57,7 @@
 		443F2C8221C9142800CDE0A3 /* Collection+Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		4456AC2D22185A5800CA4A4E /* CGRect+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Helpers.swift"; sourceTree = "<group>"; };
 		4462779E2224734800D279F5 /* UIDevice+ModelName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+ModelName.swift"; sourceTree = "<group>"; };
+		446277A0222475F900D279F5 /* CAKeyframeAnimation+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAKeyframeAnimation+Inits.swift"; sourceTree = "<group>"; };
 		446C7CCE22102E0700BF04BC /* Date+Convert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Convert.swift"; sourceTree = "<group>"; };
 		446C7CCF22102E0700BF04BC /* Date+Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Day.swift"; sourceTree = "<group>"; };
 		446C7CD022102E0700BF04BC /* DateFormatter+FormatKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+FormatKey.swift"; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		44982CE2221B17B500A4B49E /* JSONPlaceholderNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONPlaceholderNetworkService.swift; sourceTree = "<group>"; };
 		44982CE4221B1EDB00A4B49E /* CommentRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRemote.swift; sourceTree = "<group>"; };
 		44982CE6221B20B700A4B49E /* NetworkHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHandlingViewController.swift; sourceTree = "<group>"; };
-		449CF05A21F3DEB500C879D7 /* CABasicAnimation+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Animation.swift"; sourceTree = "<group>"; };
+		449CF05A21F3DEB500C879D7 /* CABasicAnimation+Inits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CABasicAnimation+Inits.swift"; sourceTree = "<group>"; };
 		449CF05C21F3DFFE00C879D7 /* Collection+isNotEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+isNotEmpty.swift"; sourceTree = "<group>"; };
 		449CF06321F3E50D00C879D7 /* CAShapeLayer+AnimatableProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+AnimatableProperty.swift"; sourceTree = "<group>"; };
 		449CF06521F3E53B00C879D7 /* CALayer+AnimatableProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+AnimatableProperty.swift"; sourceTree = "<group>"; };
@@ -258,7 +260,8 @@
 		449CF05721F3DD1E00C879D7 /* CAAnimations+Animation */ = {
 			isa = PBXGroup;
 			children = (
-				449CF05A21F3DEB500C879D7 /* CABasicAnimation+Animation.swift */,
+				449CF05A21F3DEB500C879D7 /* CABasicAnimation+Inits.swift */,
+				446277A0222475F900D279F5 /* CAKeyframeAnimation+Inits.swift */,
 			);
 			path = "CAAnimations+Animation";
 			sourceTree = "<group>";
@@ -397,7 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449CF05B21F3DEB500C879D7 /* CABasicAnimation+Animation.swift in Sources */,
+				449CF05B21F3DEB500C879D7 /* CABasicAnimation+Inits.swift in Sources */,
 				44C4816C21C669D000F96EB8 /* AppDelegate.swift in Sources */,
 				44C4818C21C66E2A00F96EB8 /* LoadingCell.swift in Sources */,
 				446C7CDA2210350600BF04BC /* Locale+LocaleKey.swift in Sources */,
@@ -408,6 +411,7 @@
 				44982CE3221B17B500A4B49E /* JSONPlaceholderNetworkService.swift in Sources */,
 				4406BF33221A98E400E2FCF6 /* NetworkService.swift in Sources */,
 				449CF06C21F3FF9500C879D7 /* CAReplicatorLayer+AnimatableProperty.swift in Sources */,
+				446277A1222475F900D279F5 /* CAKeyframeAnimation+Inits.swift in Sources */,
 				44982CE5221B1EDB00A4B49E /* CommentRemote.swift in Sources */,
 				449CF06A21F3FF1200C879D7 /* CAGradientLayer+AnimatableKey.swift in Sources */,
 				449CF05D21F3DFFE00C879D7 /* Collection+isNotEmpty.swift in Sources */,
