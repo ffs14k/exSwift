@@ -14,12 +14,12 @@ extension Date {
         return Int64(self.timeIntervalSince1970 * 1000)
     }
     
-    static var nowInMilliseconds: Int64 {
-        return Int64(Date().timeIntervalSince1970 * 1000)
-    }
-    
     static func inMilliseconds(from date: Date) -> Int64 {
         return Int64(date.timeIntervalSince1970 * 1000)
+    }
+    
+    static var nowInMilliseconds: Int64 {
+        return Int64(Date().timeIntervalSince1970 * 1000)
     }
     
     static func inMilliseconds(from date: String,
