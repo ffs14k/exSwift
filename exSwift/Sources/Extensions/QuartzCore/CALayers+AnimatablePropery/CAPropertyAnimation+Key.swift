@@ -21,7 +21,7 @@ extension CAPropertyAnimation {
         
         var keyPath: String {
             switch self {
-            case .caLayer(let property):           return property.key
+            case .caLayer(let property):           return property.rawValue
             case .shapeLayer(let property):        return property.key
             case .emmiterLayer(let property):      return property.key
             case .gradientLayer(let property):     return property.key

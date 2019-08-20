@@ -24,7 +24,7 @@ extension CAGradientLayer {
         
         var key: String {
             switch self {
-            case .inherited(let property):  return property.key
+            case .inherited(let property):  return property.rawValue
             case .colors:                   return "colors"
             case .locations:                return "locations"
             case .endPoint:                 return "endPoint"

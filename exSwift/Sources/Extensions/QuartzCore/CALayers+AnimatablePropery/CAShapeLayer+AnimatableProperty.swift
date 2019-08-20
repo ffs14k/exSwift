@@ -30,7 +30,7 @@ extension CAShapeLayer {
         
         var key: String {
             switch self {
-            case .inherited(let property):  return property.key
+            case .inherited(let property):  return property.rawValue
             case .fillColor:                return "fillColor"
             case .lineDashPhase:            return "lineDashPhase"
             case .lineWidth:                return "lineWidth"

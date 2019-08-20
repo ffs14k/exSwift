@@ -21,7 +21,7 @@ extension CATextLayer {
         
         var key: String {
             switch self {
-            case .inherited(let property):  return property.key
+            case .inherited(let property):  return property.rawValue
             case .fontSize:                 return "fontSize"
             case .foregroundColor:          return "foregroundColor"
             }

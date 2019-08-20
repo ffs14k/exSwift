@@ -22,7 +22,7 @@ extension CAEmitterLayer {
         
         var key: String {
             switch self {
-            case .inherited(let property):  return property.key
+            case .inherited(let property):  return property.rawValue
             case .emitterPosition:          return "emitterPosition"
             case .emitterZPosition:         return "emitterZPosition"
             case .emitterSize:              return "emitterSize"

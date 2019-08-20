@@ -28,7 +28,7 @@ extension CAReplicatorLayer {
         
         var key: String {
             switch self {
-            case .inherited(let property):  return property.key
+            case .inherited(let property):  return property.rawValue
             case .instanceDelay:            return "instanceDelay"
             case .instanceTransform:        return "instanceTransform"
             case .instanceRedOffset:        return "instanceRedOffset"
