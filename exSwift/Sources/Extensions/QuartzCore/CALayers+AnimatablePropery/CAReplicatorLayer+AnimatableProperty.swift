@@ -10,34 +10,20 @@ import QuartzCore
 
 extension CAReplicatorLayer {
     
-    enum AnimatableProperty {
+    enum AnimatableProperty: String {
         
-        case inherited(_ property: CALayer.CALayerAnimatableProperty)
         /// CFTimeInterval (Double)
-        case instanceDelay
+        case instanceDelay = "instanceDelay"
         /// CATransform3D
-        case instanceTransform
+        case instanceTransform = "instanceTransform"
         /// Float
-        case instanceRedOffset
+        case instanceRedOffset = "instanceRedOffset"
         /// Float
-        case instanceGreenOffset
+        case instanceGreenOffset = "instanceGreenOffset"
         /// Float
-        case instanceBlueOffset
+        case instanceBlueOffset = "instanceBlueOffset"
         /// Float
-        case instanceAlphaOffset
-        
-        var key: String {
-            switch self {
-            case .inherited(let property):  return property.rawValue
-            case .instanceDelay:            return "instanceDelay"
-            case .instanceTransform:        return "instanceTransform"
-            case .instanceRedOffset:        return "instanceRedOffset"
-            case .instanceGreenOffset:      return "instanceGreenOffset"
-            case .instanceBlueOffset:       return "instanceBlueOffset"
-            case .instanceAlphaOffset:      return "instanceAlphaOffset"
-            }
-        }
-        
+        case instanceAlphaOffset = "instanceAlphaOffset"
     }
     
 }

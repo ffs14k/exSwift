@@ -20,5 +20,5 @@ extension CAKeyframeAnimation {
         self.duration = duration
         self.beginTime = beginTime
     }
-    
+
 }

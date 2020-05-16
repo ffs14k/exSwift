@@ -19,6 +19,6 @@ extension CABasicAnimation {
         self.init(keyPath: key.keyPath)
         self.duration = duration
         self.beginTime = beginTime
+        
     }
-    
 }

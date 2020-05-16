@@ -10,37 +10,21 @@ import QuartzCore
 
 extension CAShapeLayer {
     
-    enum AnimatableProperty {
-        
-        case inherited(_ property: CALayer.CALayerAnimatableProperty)
+    enum AnimatableProperty: String {
         /// CGColor?
-        case fillColor
+        case fillColor = "fillColor"
         /// [NSNumber]?
-        case lineDashPhase
+        case lineDashPhase = "lineDashPhase"
         /// CGFloat
-        case lineWidth
+        case lineWidth = "lineWidth"
         /// CGFloat
-        case miterLimit
+        case miterLimit = "miterLimit"
         /// CGColor?
-        case strokeColor
+        case strokeColor = "strokeColor"
         /// CGFloat
-        case strokeStart
+        case strokeStart = "strokeStart"
         /// CGFloat
-        case strokeEnd
-        
-        var key: String {
-            switch self {
-            case .inherited(let property):  return property.rawValue
-            case .fillColor:                return "fillColor"
-            case .lineDashPhase:            return "lineDashPhase"
-            case .lineWidth:                return "lineWidth"
-            case .miterLimit:               return "miterLimit"
-            case .strokeColor:              return "strokeColor"
-            case .strokeStart:              return "strokeStart"
-            case .strokeEnd:                return "strokeEnd"
-            }
-        }
-        
+        case strokeEnd = "strokeEnd"
     }
     
 }

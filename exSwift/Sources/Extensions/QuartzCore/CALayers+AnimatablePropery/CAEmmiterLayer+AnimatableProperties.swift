@@ -10,25 +10,14 @@ import QuartzCore
 
 extension CAEmitterLayer {
     
-    enum AnimatableProperty {
+    enum AnimatableProperty: String {
         
-        case inherited(_ property: CALayer.CALayerAnimatableProperty)
         /// CGPoint
-        case emitterPosition
+        case emitterPosition = "emitterPosition"
         /// CGFloat
-        case emitterZPosition
+        case emitterZPosition = "emitterZPosition"
         /// CGSize
-        case emitterSize
-        
-        var key: String {
-            switch self {
-            case .inherited(let property):  return property.rawValue
-            case .emitterPosition:          return "emitterPosition"
-            case .emitterZPosition:         return "emitterZPosition"
-            case .emitterSize:              return "emitterSize"
-            }
-        }
-        
+        case emitterSize = "emitterSize"
     }
     
 }

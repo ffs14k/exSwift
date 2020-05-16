@@ -14,7 +14,7 @@ extension CALayer {
      
      - references:
      
-     [Apple. Key-Value Coding Extensions](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW2)
+     [Apple. Key-Value Coding Extensions (CALayer examples)](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html#//apple_ref/doc/uid/TP40004514-CH12-SW2)
      
      [Apple. Animatable Properties.](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreAnimation_guide/AnimatableProperties/AnimatableProperties.html)
      
@@ -128,9 +128,7 @@ extension CALayer {
         case transform = "transform"
         /// CGFloat
         case zPosition = "zPosition"
-        
     }
-    
 
 }
 

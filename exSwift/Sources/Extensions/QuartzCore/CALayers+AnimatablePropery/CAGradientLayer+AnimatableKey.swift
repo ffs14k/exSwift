@@ -10,28 +10,16 @@ import QuartzCore
 
 extension CAGradientLayer {
     
-    enum AnimatableProperty {
+    enum AnimatableProperty: String {
         
-        case inherited(_ property: CALayer.CALayerAnimatableProperty)
         /// [CGColor]? ([Any]? by Apple docs, but CGColor works as well)
-        case colors
+        case colors = "colors"
         /// [NSNuber]?
-        case locations
+        case locations = "locations"
         /// CGPoint
-        case endPoint
+        case endPoint = "endPoint"
         /// CGPoint
-        case startPoint
-        
-        var key: String {
-            switch self {
-            case .inherited(let property):  return property.rawValue
-            case .colors:                   return "colors"
-            case .locations:                return "locations"
-            case .endPoint:                 return "endPoint"
-            case .startPoint:               return "startPoint"
-            }
-        }
-        
+        case startPoint = "startPoint"
     }
     
 }

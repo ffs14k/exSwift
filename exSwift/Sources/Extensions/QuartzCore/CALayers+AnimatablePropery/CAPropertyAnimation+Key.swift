@@ -12,9 +12,10 @@ extension CAPropertyAnimation {
     
     enum Key {
         
+        /// `CALayer` in the `Parent` layer for `Subclass layers`.  Able to use this keys for animating `Subclass layers`
         case caLayer(_ property: CALayer.CALayerAnimatableProperty)
         case shapeLayer(_ property: CAShapeLayer.AnimatableProperty)
-        case emmiterLayer(_ property: CAEmitterLayer.AnimatableProperty)
+        case emitterLayer(_ property: CAEmitterLayer.AnimatableProperty)
         case gradientLayer(_ property: CAGradientLayer.AnimatableProperty)
         case replicationLayer(_ property: CAReplicatorLayer.AnimatableProperty)
         case textLayer(_ property: CATextLayer.AnimatableProperty)
@@ -22,14 +23,13 @@ extension CAPropertyAnimation {
         var keyPath: String {
             switch self {
             case .caLayer(let property):           return property.rawValue
-            case .shapeLayer(let property):        return property.key
-            case .emmiterLayer(let property):      return property.key
-            case .gradientLayer(let property):     return property.key
-            case .replicationLayer(let property):  return property.key
-            case .textLayer(let property):         return property.key
+            case .shapeLayer(let property):        return property.rawValue
+            case .emitterLayer(let property):      return property.rawValue
+            case .gradientLayer(let property):     return property.rawValue
+            case .replicationLayer(let property):  return property.rawValue
+            case .textLayer(let property):         return property.rawValue
             }
         }
-        
     }
     
 }

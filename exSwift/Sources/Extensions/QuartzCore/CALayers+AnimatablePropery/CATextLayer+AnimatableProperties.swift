@@ -10,23 +10,12 @@ import QuartzCore
 
 extension CATextLayer {
     
-    enum AnimatableProperty {
+    enum AnimatableProperty: String {
         
-        case inherited(_ property: CALayer.CALayerAnimatableProperty)
         /// CGSize
-        case fontSize
+        case fontSize = "fontSize"
         /// CGColor?
-        case foregroundColor
-
-        
-        var key: String {
-            switch self {
-            case .inherited(let property):  return property.rawValue
-            case .fontSize:                 return "fontSize"
-            case .foregroundColor:          return "foregroundColor"
-            }
-        }
-        
+        case foregroundColor = "foregroundColor"
     }
     
 }
